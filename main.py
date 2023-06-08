@@ -16,6 +16,9 @@ if __name__ == '__main__':
     # open csv file and separate by date
     data = open_csvfile('./data/sample_data_1_month.csv')
     date_data = separate_by_date(data)
-    # 
-    find_swinglowhigh(date_data)
+    
+    # find swing lows and highs 
+    for dat in date_data:
+        (peaks, valleys) = find_swinglowhigh(dat)
+        
     pass
